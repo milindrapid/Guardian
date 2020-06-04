@@ -33,9 +33,24 @@ const App = () => {
     console.log('search', searchKey)
   }
 
+  const onSearchMenuIconClick = (id) => {
+    switch (id) {
+      case 1:
+        return (alert('Email'))
+      case 2:
+        return (alert('Calendar'))
+      case 3:
+        return (alert('Activity'))
+      case 4:
+        return (alert('Favorite Tools'))
+      default:
+        break;
+    }
+  }
+
   return (
     <div className="App">
-      <Search searchCallBack={getSearchResult} />
+      <Search searchCallBack={getSearchResult} onSearchMenuIconClick={onSearchMenuIconClick} />
       <UserNameBar userName="Taylor" />
       {loading && <SkeletonCard />}
       {!loading &&
