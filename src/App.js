@@ -6,6 +6,7 @@ import CardList from "./components/CardList";
 import SkeletonCard from "./components/SkeletonCard";
 // const Tag =React.lazy(()=>import(./components/SkeletonCard))
 import Pagination from './common/customPagination/pagination.component';
+import Search from './components/search/Search';
 
 const App = () => {
   const [videos, setVideos] = useState([]);
@@ -26,8 +27,13 @@ const App = () => {
     console.log('current page', data.currentPage);
   }
 
+  const getSearchResult = (searchKey) => {
+    console.log('search', searchKey)
+  }
+
   return (
     <div className="App">
+      <Search searchCallBack={getSearchResult} />
       {loading && <SkeletonCard />}
       {!loading &&
         videos.map((list, index) => {
@@ -49,5 +55,8 @@ const App = () => {
     </div>
   );
 };
+
+
+
 
 export default App;
