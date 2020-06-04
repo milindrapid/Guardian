@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import dummyData from "./data";
+import { dummyData } from "./data";
 
 import CardList from "./components/CardList";
 import SkeletonCard from "./components/SkeletonCard";
 // const Tag =React.lazy(()=>import(./components/SkeletonCard))
 import Pagination from './common/customPagination/pagination.component';
 import Search from './components/search/Search';
+import ToolCard from './components/card/Tools.components';
 import UserNameBar from './components/userNameBar/UserNameBar.Component'
 
 const App = () => {
@@ -47,6 +48,9 @@ const App = () => {
             </section>
           );
         })}
+
+      <ToolCard />
+
       <Pagination
         currentPage={2}
         totalCount={26}

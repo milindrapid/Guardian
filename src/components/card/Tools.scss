@@ -1,0 +1,137 @@
+$topCornerRadius: 20px;
+$textColor: black;
+
+.base-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+}
+.card-container {
+  width: 17rem; // use rem insted px
+  border: 0.5px solid grey;
+  background-color: white;
+  margin: 20px;
+  position: relative;
+}
+.image-favIcon {
+  width: 15px;
+  height: 15px;
+  right: 0;
+  margin: 1rem;
+  position: absolute;
+  z-index: 1;
+}
+.image-banner {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+}
+.image-style {
+  width: 100%;
+  height: 100%;
+}
+.data-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 2;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+}
+
+.tool-title {
+  font-family: sans-serif;
+  display: flex;
+  font-size: large;
+  color: $textColor;
+  font-weight: bold;
+  text-decoration: none;
+}
+.tool-title:hover {
+  color: blue;
+}
+.tool-desc {
+  display: flex;
+  font-size: small;
+  color: $textColor;
+  font-weight: normal;
+  text-decoration: none;
+}
+.learn-more-link {
+  font-family: serif;
+  float: left;
+  font-size: medium;
+  font-weight: normal;
+  color: $textColor;
+  margin-top: 2rem;
+}
+.learn-more-link:hover {
+  color: blue;
+}
+
+.title {
+  display: flex;
+  height: max-content;
+  width: max-content;
+  font-family: serif;
+  font-weight: bold;
+  font-size: xx-large;
+  color: $textColor(0, 0, 71);
+  margin-top: 50px;
+  margin-left: 20px;
+}
+.title-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.popup-icon {
+  width: 15px;
+  height: 15px;
+  margin-top: 12px;
+  margin-left: 15px;
+}
+.view-change-icon {
+  width: 30px;
+  height: 30px;
+  float: right;
+  padding: 10px;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+.view-change-icon:hover {
+  background-color: silver;
+}
+
+.fav-tool-container {
+  width: max-content;
+  padding: 20px;
+  padding-right: 50px;
+  box-shadow: 1px 1px 5px 1px gray;
+  margin: 50px;
+  align-content: flex-start;
+}
+
+.radio {
+  color: navy;
+  font-size: large;
+  font-weight: bold;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.radio-button {
+  display: inline;
+  min-width: 10vh;
+  min-height: 20px;
+  align-items: flex-start;
+  text-align: start;
+  font-family: serif;
+  vertical-align: text-bottom;
+}

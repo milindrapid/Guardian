@@ -1,4 +1,4 @@
-const dummyData = [
+export const dummyData = [
   {
     section: "Breaking News",
     channel: "CNN",
@@ -30,7 +30,7 @@ const dummyData = [
     section: "Entertainment",
     channel: "Trend TV",
     items: [
-                    {
+      {
         id: "92B37aXykYw",
         image: "https://img.youtube.com/vi/92B37aXykYw/maxresdefault.jpg",
         title: "Willie Jones STUNS Simon Cowell In Pitch Perfect Performance of 'Your Man'!",
@@ -44,7 +44,7 @@ const dummyData = [
         views: "33 million views",
         published: "Dec 8, 2013"
       },
-      
+
       {
         id: "bzkWFljIMVg",
         image: "https://img.youtube.com/vi/bzkWFljIMVg/maxresdefault.jpg",
@@ -83,4 +83,23 @@ const dummyData = [
   }
 ];
 
-export default dummyData;
+export const TOOL_DATA = [
+  { id: '1', title: "Favorite Tool 1", content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.", imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRfED9M0VlhjHercce38TcMAKZ6xYC7CDoKFP9WaEjGhE6Tp1xK&usqp=CAU', isFavorite: true },
+  { id: '2', title: "Favorite Tool 2", content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.", imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRfED9M0VlhjHercce38TcMAKZ6xYC7CDoKFP9WaEjGhE6Tp1xK&usqp=CAU', isFavorite: false },
+  { id: '3', title: "Favorite Tool 3", content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.", imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQbbrPu7CyO6dluosGsfs7Fg4O5D4PdhOKNu0DJKZugAlz8HXxO&usqp=CAU', isFavorite: true },
+  { id: '4', title: "Favorite Tool 4", content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.", imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQbbrPu7CyO6dluosGsfs7Fg4O5D4PdhOKNu0DJKZugAlz8HXxO&usqp=CAU', isFavorite: false },
+  { id: '5', title: "Favorite Tool 5", content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.", imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQbbrPu7CyO6dluosGsfs7Fg4O5D4PdhOKNu0DJKZugAlz8HXxO&usqp=CAU', isFavorite: true },
+  { id: '6', title: "Favorite Tool 6", content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.", imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQbbrPu7CyO6dluosGsfs7Fg4O5D4PdhOKNu0DJKZugAlz8HXxO&usqp=CAU', isFavorite: false },
+  { id: '7', title: "Favorite Tool 7", content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.", imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQbbrPu7CyO6dluosGsfs7Fg4O5D4PdhOKNu0DJKZugAlz8HXxO&usqp=CAU', isFavorite: true },
+  { id: '8', title: "Favorite Tool 8", content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.", imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQbbrPu7CyO6dluosGsfs7Fg4O5D4PdhOKNu0DJKZugAlz8HXxO&usqp=CAU', isFavorite: false },
+  { id: '9', title: "Favorite Tool 9", content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.", imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQbbrPu7CyO6dluosGsfs7Fg4O5D4PdhOKNu0DJKZugAlz8HXxO&usqp=CAU', isFavorite: true },
+  { id: '10', title: "Favorite Tool 10", content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.", imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQbbrPu7CyO6dluosGsfs7Fg4O5D4PdhOKNu0DJKZugAlz8HXxO&usqp=CAU', isFavorite: false },
+]
+
+export const FAVORITE_TOOL = [
+  { id: '1', value: 'Favorite Tool1' },
+  { id: '2', value: 'Favorite Tool2' },
+  { id: '3', value: 'Favorite Tool3' },
+  { id: '4', value: 'Favorite Tool4' },
+  { id: '5', value: 'Favorite Tool5' }
+]
