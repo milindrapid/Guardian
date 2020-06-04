@@ -1,0 +1,38 @@
+@import '../../resources/mixins/flexbox';
+
+.user-name-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    align-items: center;
+    p {   
+        padding: 0 1rem 0 0;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #0D3F5E;
+        margin: 0.5rem 0;
+    }
+    button {
+        margin: 0.5rem 0;
+        height: 2rem;
+        width: 12rem;
+        border-radius: 16px;
+        border-color: #0D3F5E;
+        background: transparent;
+        padding: 5px 30px;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(space-between);
+        &:focus {
+            outline: none;
+        }
+        .ic-edit {
+            display: block;
+            height: 15px;
+            width: 15px;
+            background: url('../../resources/icons/edit-icon.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+}

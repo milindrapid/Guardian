@@ -7,6 +7,7 @@ import SkeletonCard from "./components/SkeletonCard";
 // const Tag =React.lazy(()=>import(./components/SkeletonCard))
 import Pagination from './common/customPagination/pagination.component';
 import Search from './components/search/Search';
+import UserNameBar from './components/userNameBar/UserNameBar.Component'
 
 const App = () => {
   const [videos, setVideos] = useState([]);
@@ -34,6 +35,7 @@ const App = () => {
   return (
     <div className="App">
       <Search searchCallBack={getSearchResult} />
+      <UserNameBar userName="Taylor" />
       {loading && <SkeletonCard />}
       {!loading &&
         videos.map((list, index) => {
