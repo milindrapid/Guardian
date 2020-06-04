@@ -5,6 +5,7 @@ import dummyData from "./data";
 import CardList from "./components/CardList";
 import SkeletonCard from "./components/SkeletonCard";
 // const Tag =React.lazy(()=>import(./components/SkeletonCard))
+import Pagination from './common/customPagination/pagination.component';
 
 const App = () => {
   const [videos, setVideos] = useState([]);
@@ -21,6 +22,10 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  const onPageChanged = (data) => {
+    console.log('current page', data.currentPage);
+  }
+
   return (
     <div className="App">
       {loading && <SkeletonCard />}
@@ -34,6 +39,13 @@ const App = () => {
             </section>
           );
         })}
+      <Pagination
+        currentPage={2}
+        totalCount={26}
+        itemsPerPage={3}
+        pageRange={4}
+        onChange={onPageChanged}
+      />
     </div>
   );
 };
