@@ -25,11 +25,11 @@ const ToolCard = ({
         <a href={callToAction}> i</a>
       </div>
       <div className="card-description">{description}</div>
-      <div>
-        <a href={callToMore} className="card-link">
-          Learn More
-        </a>
-      </div>
+    </div>
+    <div className="card-footer">
+      <a href={callToMore} className="card-link">
+        Learn More
+      </a>
     </div>
   </div>
 );

@@ -1,37 +1,24 @@
 import React from "react";
-import ToolCard from "../../components/ToolCard/ToolCard";
+import ToolCard from "../../components/Tools/ToolCard";
 import "./Tools.scss";
+import toolsData from "../../mockData/toolsData";
 
 const Tools = () => {
   return (
     <div className="container">
-      <div className="col">
-        <ToolCard
-          isFavorite
-          title="Living Balance Sheet"
-          description="Innovative thinking & advanced web technology to help you achieve financial balance"
-          callToAction=""
-          callToMore=""
-        />
-      </div>
-      <div className="col">
-        <ToolCard
-          isFavorite={false}
-          title="Living Balance Sheet"
-          description="Innovative thinking & advanced web technology to help you achieve financial balance"
-          callToAction=""
-          callToMore=""
-        />
-      </div>
-      <div className="col">
-        <ToolCard
-          isFavorite={false}
-          title="Living Balance Sheet"
-          description="Innovative thinking & advanced web technology to help you achieve financial balance"
-          callToAction=""
-          callToMore=""
-        />
-      </div>
+      {toolsData.map((tools, index) => {
+        return (
+          <div className="col" key={index}>
+            <ToolCard
+              isFavorite={tools.isFavorite}
+              title={tools.title}
+              description={tools.description}
+              callToAction={tools.callToAction}
+              callToMore={tools.callToMore}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 };
