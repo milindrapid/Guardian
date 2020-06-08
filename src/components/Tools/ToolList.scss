@@ -1,0 +1,41 @@
+@import "../../stylesheet/color";
+
+.tool-list {
+  padding: 1.5rem;
+  margin: 1rem;
+  border-bottom: $grey 1px solid;
+  background-color: $white;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  .list-favorite {
+    font-size: 2rem;
+    font-weight: 700;
+    width: 10%;
+    &.active {
+      color: $primary;
+    }
+    &.disabled {
+      color: $grey;
+    }
+  }
+  .list-call-to {
+    font-size: 0.875rem;
+    width: 10%;
+  }
+  .list-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    width: 25%;
+    text-align: left;
+  }
+  .list-description {
+    font-size: 0.75rem;
+    width: 40%;
+  }
+  .list-link {
+    font-size: 0.875rem;
+    width: 15%;
+    text-align: right;
+  }
+}
