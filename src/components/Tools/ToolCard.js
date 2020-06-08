@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import "./ToolCard.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import logo from "../../images/logo.png";
+// import React from 'react'
 
 const ToolCard = ({
   isFavorite,
