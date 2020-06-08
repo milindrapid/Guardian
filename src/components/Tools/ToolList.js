@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./ToolList.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ToolList = ({
   isFavorite,
@@ -11,10 +12,12 @@ const ToolList = ({
 }) => (
   <div className={`tool-list ${isFavorite ? "active" : "disabled"}`}>
     <div className={`list-favorite ${isFavorite ? "active" : "disabled"}`}>
-      *
+      <FontAwesomeIcon icon="star" />
     </div>
     <div className="list-call-to">
-      <a href={callToAction}> i</a>
+      <a href={callToAction}>
+        <FontAwesomeIcon icon="external-link-alt" />
+      </a>
     </div>
     <div className="list-title">
       <span>{title}</span>
