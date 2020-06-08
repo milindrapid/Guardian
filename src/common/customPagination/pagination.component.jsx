@@ -15,8 +15,10 @@ import './pagination.scss';
  * @param {Object} liClass css class for page numbers
  * @param {Object} prevNextClass css class for prev and next list items
  * @param {Object} firstLastClass css class for first and last list items
- * @param {Object} prevNextButtonClass css class for prev and next buttons
- * @param {Object} firstLastButtonClass css class for first and last buttons
+ * @param {Object} prevButtonClass css class for prev and next buttons
+ * @param {Object} nextButtonClass css class for prev and next buttons
+ * @param {Object} firstButtonClass css class for first and last buttons
+ * @param {Object} lastButtonClass css class for first and last buttons
  * @param {Function} onChange Callback function to be invoked when changes page
  * 
  * @returns {number} currentPage - Currently selected page number
@@ -106,17 +108,17 @@ const Pagination = (props) => {
                 <div className="pagination-container">
                     <ul id="page-numbers">
                         <li style={props.firstLastClass ? props.firstLastClass : null} className={`prevClass ${currentPage === 1 ? 'disabled' : ''}`}>
-                            <button style={props.firstLastButtonClass ? props.firstLastButtonClass : null} onClick={handleClickFirst}>{props.firstButtonLabel ? props.firstButtonLabel : '<<'}</button>
+                            <button style={props.firstButtonClass ? props.firstButtonClass : null} onClick={handleClickFirst}>{props.firstButtonLabel ? props.firstButtonLabel : '<<'}</button>
                         </li>
                         <li style={props.prevNextClass ? props.prevNextClass : null} className={`prevClass ${currentPage === 1 ? 'disabled' : ''}`}>
-                            <button style={props.prevNextButtonClass ? props.prevNextButtonClass : null} onClick={handleClickPrev}>{props.prevButtonLabel ? props.prevButtonLabel : '<'}</button>
+                            <button style={props.prevButtonClass ? props.prevButtonClass : null} onClick={handleClickPrev}>{props.prevButtonLabel ? props.prevButtonLabel : '<'}</button>
                         </li>
                         {renderPageNumbers()}
                         <li style={props.prevNextClass ? props.prevNextClass : null} className={`nextClass ${currentPage === pageNumbers.length ? 'disabled' : ''}`}>
-                            <button style={props.prevNextButtonClass ? props.prevNextButtonClass : null} onClick={handleClickNext}>{props.nextButtonLabel ? props.nextButtonLabel : '>'}</button>
+                            <button style={props.nextButtonClass ? props.nextButtonClass : null} onClick={handleClickNext}>{props.nextButtonLabel ? props.nextButtonLabel : '>'}</button>
                         </li>
                         <li style={props.firstLastClass ? props.firstLastClass : null} className={`nextClass ${currentPage === pageNumbers.length ? 'disabled' : ''}`}>
-                            <button style={props.firstLastButtonClass ? props.firstLastButtonClass : null} onClick={handleClickLast}>{props.lastButtonLabel ? props.lastButtonLabel : '>>'}</button>
+                            <button style={props.lastButtonClass ? props.lastButtonClass : null} onClick={handleClickLast}>{props.lastButtonLabel ? props.lastButtonLabel : '>>'}</button>
                         </li>
                     </ul>
                 </div>
