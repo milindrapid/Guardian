@@ -103,3 +103,9 @@ export const FAVORITE_TOOL = [
   { id: '4', value: 'Favorite Tool4' },
   { id: '5', value: 'Favorite Tool5' }
 ]
+
+export const UPDATES_FROM_GUARDIAN = [
+  { id: 1, title: "Marketing", link: 'Coronavirus and Market Volatility Playbook', content: 'Your resource of managing coronavirus and market volatility' },
+  { id: 1, title: "New Feature", link: 'Financial Managemen Tool', content: 'Your resource of managing coronavirus and market volatility' },
+  { id: 1, title: "Product Update", link: 'Bank Draft cutoff', content: 'Your resource of managing coronavirus and market volatility' },
+]

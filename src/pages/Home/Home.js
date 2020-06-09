@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../App.css";
-import { dummyData } from "../../data";
+import { dummyData, UPDATES_FROM_GUARDIAN } from "../../data";
 
 import CardList from "../../components/CardList";
 import SkeletonCard from "../../components/SkeletonCard";
@@ -10,6 +10,7 @@ import Search from "../../components/search/Search";
 import ToolCard from "../../components/card/Tools.components";
 import UserNameBar from "../../components/userNameBar/UserNameBar.Component";
 import ImportantNotice from "../../components/importantNotice/ImportantNotice";
+import GuardianUpdates from '../../components/GuardianUpdates/GuardianUpdates';
 
 const Home = () => {
   const [videos, setVideos] = useState([]);
@@ -54,6 +55,10 @@ const Home = () => {
     setShowImportantNotice(false)
   }
 
+  const onItemClick = (link) => {
+    alert(link)
+  }
+
   return (
     <div className="App">
       <Search
@@ -62,7 +67,8 @@ const Home = () => {
       />
       {showImportantNotice ? <ImportantNotice close={closeImpNotice} /> : null}
       <UserNameBar userName="Taylor" />
-      {loading && <SkeletonCard />}
+      <GuardianUpdates data={UPDATES_FROM_GUARDIAN} onItemClick={onItemClick} />
+      {/* {loading && <SkeletonCard />}
       {!loading &&
         videos.map((list, index) => {
           return (
@@ -74,7 +80,7 @@ const Home = () => {
           );
         })}
 
-      <ToolCard />
+      <ToolCard /> */}
 
       <Pagination
         currentPage={2}
