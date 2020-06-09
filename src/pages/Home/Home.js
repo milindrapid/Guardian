@@ -9,10 +9,12 @@ import Pagination from "../../common/customPagination/pagination.component";
 import Search from "../../components/search/Search";
 import ToolCard from "../../components/card/Tools.components";
 import UserNameBar from "../../components/userNameBar/UserNameBar.Component";
+import ImportantNotice from "../../components/importantNotice/ImportantNotice";
 
 const Home = () => {
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [showImportantNotice, setShowImportantNotice] = useState(true)
 
   // Load this effect on mount
   useEffect(() => {
@@ -48,12 +50,17 @@ const Home = () => {
     }
   };
 
+  const closeImpNotice = () => {
+    setShowImportantNotice(false)
+  }
+
   return (
     <div className="App">
       <Search
         searchCallBack={getSearchResult}
         onSearchMenuIconClick={onSearchMenuIconClick}
       />
+      {showImportantNotice ? <ImportantNotice close={closeImpNotice} /> : null}
       <UserNameBar userName="Taylor" />
       {loading && <SkeletonCard />}
       {!loading &&

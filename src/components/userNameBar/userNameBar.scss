@@ -3,8 +3,10 @@
 .user-name-container {
     display: flex;
     flex-direction: row;
-    margin-top: 2rem;
     align-items: center;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     p {   
         padding: 0 1rem 0 0;
         font-size: 2rem;

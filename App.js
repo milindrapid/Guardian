@@ -16,6 +16,7 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [gridView, setGridView] = useState(true);
   const [listView, setListView] = useState(false);
+  
 
   // Load this effect on mount
   useEffect(() => {
@@ -61,12 +62,11 @@ const App = () => {
     }
   };
 
+  
+
   return (
     <div className="App">
-      <Search
-        searchCallBack={getSearchResult}
-        onSearchMenuIconClick={onSearchMenuIconClick}
-      />
+      <Search searchCallBack={getSearchResult} onSearchMenuIconClick={onSearchMenuIconClick} />
       <UserNameBar userName="Taylor" />
       <div>
         <div
