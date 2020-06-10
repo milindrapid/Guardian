@@ -9,7 +9,7 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/home">
+        <Route exact path="/">
           <Home />
         </Route>
         <Route path="/tools">
