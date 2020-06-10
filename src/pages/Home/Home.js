@@ -9,6 +9,7 @@ import Pagination from "../../common/customPagination/pagination.component";
 import Search from "../../components/search/Search";
 import ToolCard from "../../components/card/Tools.components";
 import UserNameBar from "../../components/userNameBar/UserNameBar.Component";
+import RecentActivity from '../../components/recentActivity/RecentActivity.Component';
 
 const Home = () => {
   const [videos, setVideos] = useState([]);
@@ -55,6 +56,7 @@ const Home = () => {
         onSearchMenuIconClick={onSearchMenuIconClick}
       />
       <UserNameBar userName="Taylor" />
+      <RecentActivity />
       {loading && <SkeletonCard />}
       {!loading &&
         videos.map((list, index) => {
