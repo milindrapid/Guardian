@@ -1,38 +1,44 @@
 import React from "react";
-import ToolCard from "../../components/ToolCard/ToolCard";
+import ToolCard from "../../components/Tools/ToolCard";
+import ToolList from "../../components/Tools/ToolList";
 import "./Tools.scss";
+import toolsData from "../../mockData/toolsData";
 
 const Tools = () => {
   return (
-    <div className="container">
-      <div className="col">
-        <ToolCard
-          isFavorite
-          title="Living Balance Sheet"
-          description="Innovative thinking & advanced web technology to help you achieve financial balance"
-          callToAction=""
-          callToMore=""
-        />
+    <>
+      <h2>Card View</h2>
+      <div className="container">
+        {toolsData.map((tools, index) => {
+          return (
+            <div className="col" key={index}>
+              <ToolCard
+                isFavorite={tools.isFavorite}
+                title={tools.title}
+                description={tools.description}
+                callToAction={tools.callToAction}
+                callToMore={tools.callToMore}
+              />
+            </div>
+          );
+        })}
       </div>
-      <div className="col">
-        <ToolCard
-          isFavorite={false}
-          title="Living Balance Sheet"
-          description="Innovative thinking & advanced web technology to help you achieve financial balance"
-          callToAction=""
-          callToMore=""
-        />
+      <h2>List View</h2>
+      <div>
+        {toolsData.map((tools, index) => {
+          return (
+            <ToolList
+              key={index}
+              isFavorite={tools.isFavorite}
+              title={tools.title}
+              description={tools.description}
+              callToAction={tools.callToAction}
+              callToMore={tools.callToMore}
+            />
+          );
+        })}
       </div>
-      <div className="col">
-        <ToolCard
-          isFavorite={false}
-          title="Living Balance Sheet"
-          description="Innovative thinking & advanced web technology to help you achieve financial balance"
-          callToAction=""
-          callToMore=""
-        />
-      </div>
-    </div>
+    </>
   );
 };
 
