@@ -10,7 +10,7 @@ const ToolList = ({
   callToAction,
   callToMore,
 }) => (
-  <div className={`tool-list ${isFavorite ? "active" : "disabled"}`}>
+  <div className="tool-list">
     <div className={`list-favorite ${isFavorite ? "active" : "disabled"}`}>
       <FontAwesomeIcon icon="star" />
     </div>
