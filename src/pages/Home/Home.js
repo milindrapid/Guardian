@@ -1,34 +1,39 @@
-import React, { useState, useEffect } from "react";
+import React, {
+  useState,
+  //  useEffect
+} from "react";
 import "../../App.css";
 import { dummyData, UPDATES_FROM_GUARDIAN, UPCOMING_EVENT } from "../../data";
 
-import CardList from "../../components/CardList";
-import SkeletonCard from "../../components/SkeletonCard";
+
+// import CardList from "../../components/CardList";
+// import SkeletonCard from "../../components/SkeletonCard";
 // const Tag =React.lazy(()=>import(./components/SkeletonCard))
 import Pagination from "../../common/customPagination/pagination.component";
 import Search from "../../components/search/Search";
-import ToolCard from "../../components/card/Tools.components";
+// import ToolCard from "../../components/card/Tools.components";
 import UserNameBar from "../../components/userNameBar/UserNameBar.Component";
 import ImportantNotice from "../../components/importantNotice/ImportantNotice";
 import GuardianUpdates from '../../components/GuardianUpdates/GuardianUpdates';
 import RecentActivity from '../../components/recentActivity/RecentActivity.Component';
 import EventCard from '../../components/EventCard/EventCard.Component';
 
+
 const Home = () => {
-  const [videos, setVideos] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [showImportantNotice, setShowImportantNotice] = useState(true)
+  // const [videos, setVideos] = useState([]);
+  // const [loading, setLoading] = useState(false);
+  const [showImportantNotice, setShowImportantNotice] = useState(true);
 
   // Load this effect on mount
-  useEffect(() => {
-    setLoading(true);
-    const timer = setTimeout(() => {
-      setVideos(dummyData);
-      setLoading(false);
-    }, 5000);
-    // Cancel the timer while unmounting
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   const timer = setTimeout(() => {
+  //     setVideos(dummyData);
+  //     setLoading(false);
+  //   }, 5000);
+  //   // Cancel the timer while unmounting
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   const onPageChanged = (data) => {
     console.log("current page", data.currentPage);
@@ -54,12 +59,12 @@ const Home = () => {
   };
 
   const closeImpNotice = () => {
-    setShowImportantNotice(false)
-  }
+    setShowImportantNotice(false);
+  };
 
   const onItemClick = (link) => {
-    alert(link)
-  }
+    alert(link);
+  };
 
   const eventCardClick = () => {
     alert("Event")
