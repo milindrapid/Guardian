@@ -31,13 +31,14 @@ const CustomDropDown = (props) => {
     }, []);
 
     const onItemChange = (event) => {
+        setSelectedOption(event.target.value);
         props.onItemChange({ selected: event.target.value });
     }
 
     return (
         <>
             <div class="custom-dropdown">
-                <select class="custom-dropdown-select" id="customDropdown" defaultValue={selectedOption} onChange={(event) => onItemChange(event)}>
+                <select class="custom-dropdown-select" id="customDropdown" value={selectedOption} onChange={(event) => onItemChange(event)}>
                     <option selected={!selectedOption ? true : false}>{displayLabel}</option>
                     {
                         props.items.map((item) => {

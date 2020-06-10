@@ -27,7 +27,7 @@ const RecentActivity = (props) => {
                     items={items}
                     optionText='text'
                     onItemChange={onItemChange}
-                    selectedOption={"1"}
+                    selectedOption={1}
                     optionValue="id"
                 />
             </div>
