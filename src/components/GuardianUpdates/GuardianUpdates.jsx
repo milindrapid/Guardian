@@ -12,7 +12,7 @@ const GuradianUpdates = (props) => {
         return (
             props.data.map(update => (
                 <div className="data-content">
-                    <img className="close-image" src={require('../../images/close.svg')} alt="close"/>
+                    <img className="close-image" src={require('../../images/close.svg')} alt="close" />
                     <label className="item-title">{update.title}</label>
                     <label className="item-link" onClick={() => onItemClick(update.link)}>{update.link}</label>
                     <label className="item-content">{update.content}</label>
@@ -24,13 +24,7 @@ const GuradianUpdates = (props) => {
 
     return (
         <div className="base-container">
-            <div className="title-container">
-                <div className="main-title">Updates from Guardian</div>
-                {/* <div style={{ position: 'absolute', right: '0' }}>
-                    <img className="move-icon" src={require('../../../../Images/move-icon.svg')} alt="move" />
-                    <img className="more-icon" src={require('../../../../Images/more-icon.svg')} alt="more" />
-                </div> */}
-            </div>
+            <span className="update-main-title">Updates from Guardian</span>
             <div>
                 <ul className="item-container">
                     {getGuardianUpdates()}

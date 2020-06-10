@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../../App.css";
-import { dummyData, UPDATES_FROM_GUARDIAN } from "../../data";
+import { dummyData, UPDATES_FROM_GUARDIAN, UPCOMING_EVENT } from "../../data";
 
 import CardList from "../../components/CardList";
 import SkeletonCard from "../../components/SkeletonCard";
@@ -12,6 +12,7 @@ import UserNameBar from "../../components/userNameBar/UserNameBar.Component";
 import ImportantNotice from "../../components/importantNotice/ImportantNotice";
 import GuardianUpdates from '../../components/GuardianUpdates/GuardianUpdates';
 import RecentActivity from '../../components/recentActivity/RecentActivity.Component';
+import EventCard from '../../components/EventCard/EventCard.Component';
 
 const Home = () => {
   const [videos, setVideos] = useState([]);
@@ -60,16 +61,38 @@ const Home = () => {
     alert(link)
   }
 
+  const eventCardClick = () => {
+    alert("Event")
+  }
+
+  const showEventsList = () => {
+
+    return (
+      <div className="event-container">
+        <span className="main-title">Events</span>
+        <ul className="event-data-container">
+          {UPCOMING_EVENT.map(event => (
+            <EventCard
+              eventDetails={event}
+              onItemClick={eventCardClick}
+            />
+          ))}
+        </ul>
+      </div>
+    )
+  }
+
   return (
     <div className="App">
-      <Search
-        searchCallBack={getSearchResult}
-        onSearchMenuIconClick={onSearchMenuIconClick}
-      />
+      <Search searchCallBack={getSearchResult} onSearchMenuIconClick={onSearchMenuIconClick} />
+      <div className="hrz-line" />
       {showImportantNotice ? <ImportantNotice close={closeImpNotice} /> : null}
       <UserNameBar userName="Taylor" />
+      <div className="hrz-line" />
       <RecentActivity />
       <GuardianUpdates data={UPDATES_FROM_GUARDIAN} onItemClick={onItemClick} />
+      {showEventsList()}
+
       {/* {loading && <SkeletonCard />}
       {!loading &&
         videos.map((list, index) => {

@@ -1,68 +1,70 @@
-$text-color:#2B2B2B;
+$text-color: #2b2b2b;
 .event-card-container {
-    padding: 1rem;
-    border: 1px solid grey;
-    height: 18rem;
+  border: 1px solid #e9e9e7;
+  height: 18rem;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  margin: .75rem;
+  .banner {
+    width: 100%;
+    height: 9rem;
+  }
+  .data-view {
+    position: relative;
+    flex-grow: 1;
+    padding: 0.5rem;
+  }
+  .event-details {
+    height: 5rem;
+    margin: 0.2rem 0;
+    overflow-y: auto;
+    .event-title {
+      font-size: 15px;
+      font-weight: bold;
+      font-style: normal;
+      cursor: pointer;
+      position: relative;
+      margin-bottom: 5px;
+      padding: 0;
+      display: block;
+      color: $text-color;
+    }
+    .event-sche {
+      font-weight: normal;
+      margin-right: 2px;
+      margin-left: 2px;
+      font-size: 15px;
+      color: $text-color;
+    }
+  }
+  .event-more {
     display: flex;
-    flex-direction: column;
-    .banner {
-        width: 100%;
-        height: 9rem;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      margin-top: 0;
     }
-    .data-view {
-        position: relative;
-        flex-grow: 1;
+    label {
+      display: inline-flex;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: bold;
     }
-    .event-details {
-        height: 5rem;
-        margin: 0.2rem 0;
-        overflow-y: auto;
-        .event-title {
-            font-size: 15px;
-            font-weight: bold;
-            font-style: normal;
-            cursor: pointer;
-            position: relative;
-            margin-bottom: 5px;
-            padding: 0;
-            display: block;
-            color: $text-color;
-        }
-        .event-sche {
-            font-weight: normal;
-            margin-right: 2px;
-            margin-left: 2px;
-            font-size: 15px;
-            color: $text-color;
-        }
+    .ic-streaming {
+      width: 20px;
+      height: 20px;
+      background: url("../../images/streaming.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin-right: 0.5rem;
     }
-    .event-more {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        a {
-            margin-top: 0;
-        }
-        label {
-            display: inline-flex;
-            font-size: 12px;
-            font-style: normal;
-            font-weight: bold;
-        }
-        .ic-streaming {
-            width: 20px;
-            height: 20px;
-            background: url('../../images/streaming.svg');
-            background-size: contain;
-            background-repeat: no-repeat;
-            margin-right: 0.5rem;
-        }
-        .learn-more-link {
-            font-size: 16px;
-            font-style: normal;
-            font-weight: bold;
-            text-decoration: underline;
-            color: #00728d;
-        }
+    .learn-more-link {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: bold;
+      text-decoration: underline;
+      color: #00728d;
     }
+  }
 }

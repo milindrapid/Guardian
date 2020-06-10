@@ -140,3 +140,12 @@ export const FAVORITE_TOOL = [
   { id: "4", value: "Favorite Tool4" },
   { id: "5", value: "Favorite Tool5" },
 ];
+
+
+export const UPCOMING_EVENT = [
+  { id: 1, event: 'Smart Office Getting Started', date: 'May 11, 2020', time: '2:00PM EST' },
+  { id: 2, event: 'Building Blocks: Delivery Policies Electronically and Efficiantly ', date: 'May 11, 2020', time: '2:00PM EST' },
+  { id: 3, event: 'Smart Office Maximizing Contact Information', date: 'May 11, 2020', time: '2:00PM EST' },
+  { id: 4, event: 'Leveling Up', date: 'May 11, 2020', time: '2:00PM EST' },
+  { id: 5, event: 'New Product Introduction', date: 'May 11, 2020', time: '2:00PM EST' }
+]

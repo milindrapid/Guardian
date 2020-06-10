@@ -19,9 +19,8 @@ $link-color: #00728d;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  position: relative;
 }
-.main-title {
+.update-main-title {
   font-size: x-large;
   font-weight: bold;
   color: $main-title-color;
@@ -74,9 +73,9 @@ $link-color: #00728d;
 
 .close-image {
   right: 0;
-  width: 15px;
-  height: 15px;
-  padding: 10px;
+  width: 40px;
+  height: 40px;
+  padding: .75rem;
   margin-right: 25px;
   margin-top: 5px;
   cursor: pointer;

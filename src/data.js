@@ -109,3 +109,11 @@ export const UPDATES_FROM_GUARDIAN = [
   { id: 1, title: "New Feature", link: 'Financial Managemen Tool', content: 'Your resource of managing coronavirus and market volatility' },
   { id: 1, title: "Product Update", link: 'Bank Draft cutoff', content: 'Your resource of managing coronavirus and market volatility' },
 ]
+
+export const UPCOMING_EVENT = [
+  { id: 1, event: 'Smart Office Getting Started', date: 'May 11, 2020', time: '2:00PM EST' },
+  { id: 2, event: 'Building Blocks: Delivery Policies Electronically and Efficiantly ', date: 'May 11, 2020', time: '2:00PM EST' },
+  { id: 3, event: 'Smart Office Maximizing Contact Information', date: 'May 11, 2020', time: '2:00PM EST' },
+  { id: 4, event: 'Leveling Up', date: 'May 11, 2020', time: '2:00PM EST' },
+  { id: 5, event: 'New Product Introduction', date: 'May 11, 2020', time: '2:00PM EST' }
+]

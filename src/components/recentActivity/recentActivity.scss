@@ -1,8 +1,11 @@
 @import '../../resources/mixins/flexbox';
 
 .recent-activity-container {
+    margin: 1rem;
     margin-top: 2rem;
-    padding: 1rem;
+    padding: 1.5rem;
+    border: 1px solid silver;
+    background-color: white;
     .recent-activity-header {
         @include flexbox();
         @include align-items(flex-start);
@@ -18,7 +21,7 @@
         @include flexbox();
         @include flex-direction(column);
         .recent-activity {  
-            padding: 1rem;
+            padding: 1.5rem;
             background-color: #F2FAFC;
             &:not(:first-child) {
                 margin-top: 1rem;
