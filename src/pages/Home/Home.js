@@ -2,9 +2,8 @@ import React, {
   useState,
   //  useEffect
 } from "react";
-import "../../App.css";
+import "./Home.css";
 import { dummyData, UPDATES_FROM_GUARDIAN, UPCOMING_EVENT } from "../../data";
-
 
 // import CardList from "../../components/CardList";
 // import SkeletonCard from "../../components/SkeletonCard";
@@ -14,11 +13,10 @@ import Search from "../../components/search/Search";
 // import ToolCard from "../../components/card/Tools.components";
 import UserNameBar from "../../components/userNameBar/UserNameBar.Component";
 import ImportantNotice from "../../components/importantNotice/ImportantNotice";
-import GuardianUpdates from '../../components/GuardianUpdates/GuardianUpdates';
-import RecentActivity from '../../components/recentActivity/RecentActivity.Component';
-import EventCard from '../../components/events/EventCard/EventCard.Component';
-import Events from '../../components/events/Events';
-
+import GuardianUpdates from "../../components/GuardianUpdates/GuardianUpdates";
+import RecentActivity from "../../components/recentActivity/RecentActivity.Component";
+import EventCard from "../../components/events/EventCard/EventCard.Component";
+import Events from "../../components/events/Events";
 
 const Home = () => {
   // const [videos, setVideos] = useState([]);
@@ -69,9 +67,14 @@ const Home = () => {
 
   return (
     <div className="App">
-      <Search searchCallBack={getSearchResult} onSearchMenuIconClick={onSearchMenuIconClick} />
+      <Search
+        searchCallBack={getSearchResult}
+        onSearchMenuIconClick={onSearchMenuIconClick}
+      />
       <div className="hrz-line" />
-      {showImportantNotice ? <ImportantNotice url="/#" close={closeImpNotice} /> : null}
+      {showImportantNotice ? (
+        <ImportantNotice url="/#" close={closeImpNotice} />
+      ) : null}
       <UserNameBar userName="Taylor" />
       <div className="hrz-line" />
       <RecentActivity />
