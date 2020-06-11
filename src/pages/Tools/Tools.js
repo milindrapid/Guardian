@@ -6,9 +6,9 @@ import toolsData from "../../mockData/toolsData";
 
 const Tools = () => {
   return (
-    <>
-      <h2>Card View</h2>
-      <div className="container">
+    <div className="event-container">
+      <h2 className="main-title">Card View</h2>
+      <div className="event-data-container">
         {toolsData.map((tools, index) => {
           return (
             <div className="col" key={index}>
@@ -23,7 +23,7 @@ const Tools = () => {
           );
         })}
       </div>
-      <h2>List View</h2>
+      <h2 className="main-title">List View</h2>
       <div>
         {toolsData.map((tools, index) => {
           return (
@@ -38,7 +38,7 @@ const Tools = () => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 
