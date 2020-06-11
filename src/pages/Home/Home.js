@@ -71,7 +71,7 @@ const Home = () => {
     <div className="App">
       <Search searchCallBack={getSearchResult} onSearchMenuIconClick={onSearchMenuIconClick} />
       <div className="hrz-line" />
-      {showImportantNotice ? <ImportantNotice close={closeImpNotice} /> : null}
+      {showImportantNotice ? <ImportantNotice url="/#" close={closeImpNotice} /> : null}
       <UserNameBar userName="Taylor" />
       <div className="hrz-line" />
       <RecentActivity />
