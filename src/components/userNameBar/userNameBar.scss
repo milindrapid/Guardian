@@ -7,7 +7,7 @@
     background-color: white;
     padding: 1rem 2rem 1rem 2rem;
     @include justify-content(space-between);
-    .user-name {
+    .user-name, .user-actions {
         @include flexbox();
         @include align-items(center);
     }
@@ -40,6 +40,14 @@
             background: url('../../resources/icons/edit-icon.png');
             background-size: contain;
             background-repeat: no-repeat;
+        }
+    }
+    .custom-dropdown {
+        margin-left: 1rem;
+        width: 8rem;
+        .custom-dropdown-select {
+            padding-left: 0;
+            padding-right: 0; 
         }
     }
 }
