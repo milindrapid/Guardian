@@ -6,6 +6,11 @@
     align-items: center;
     background-color: white;
     padding: 1rem 2rem 1rem 2rem;
+    @include justify-content(space-between);
+    .user-name {
+        @include flexbox();
+        @include align-items(center);
+    }
     p {   
         padding: 0 1rem 0 0;
         font-size: 32px;
@@ -14,7 +19,7 @@
         color: #0D3F5E;
         margin: 0.25rem 0;
     }
-    button {
+    .edit-home-feed {
         margin: 0.25rem 0 0;
         height: 2rem;
         width: 13rem;

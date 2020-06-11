@@ -1,0 +1,38 @@
+@import '../../resources/mixins/flexbox';
+
+.clientview-container {
+    margin: 0.25rem 0 0;
+    height: 2rem;
+    width: 11rem;
+    border-radius: 16px;
+    padding: 5px 20px;
+    color: #fff;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(space-between);
+    &:focus {
+        outline: none;
+    }
+    .ic-eye-open {
+        display: block;
+        height: 17px;
+        width: 17px;
+        background: url('../../resources/icons/ic-eye.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .ic-eye-close {
+        display: block;
+        height: 18px;
+        width: 18px;
+        background: url('../../resources/icons/ic-eye-hide.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    &.clientview-on {
+        background-color: #0D3F5E;
+    }
+    &.clientview-off {
+        background-color: #525151db;
+    }
+}
