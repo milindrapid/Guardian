@@ -28,7 +28,7 @@ const CustomDropDown = (props) => {
         }
         setSelectedOption(tempSelected);
         setDisplayLabel(props.label ? props.label : 'Select');
-    }, [props.items, props.label, props.optionValue, props.selectedOption]);
+    }, []);
 
     const onItemChange = (event) => {
         setSelectedOption(event.target.value);
