@@ -1,19 +1,17 @@
 $main-title-color: #0d3f5e;
 $link-color: #00728d;
+$border-color: #a7a8aa;
 
 .base-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  border: 1px solid silver;
+  border: 1px solid $border-color;
   background-color: white;
   padding-left: 1.5rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 2rem 2rem 0 2rem;
 }
 .title-container {
   display: flex;
@@ -38,7 +36,7 @@ $link-color: #00728d;
   margin-left: 10px;
   margin-right: 10px;
 }
-.item-container{
+.item-container {
   padding-left: 0;
 }
 .data-content {
@@ -73,9 +71,9 @@ $link-color: #00728d;
 
 .close-image {
   right: 0;
-  width: 40px;
-  height: 40px;
-  padding: .75rem;
+  width: 35px;
+  height: 35px;
+  padding: 0.75rem;
   margin-right: 25px;
   margin-top: 5px;
   cursor: pointer;
@@ -93,17 +91,17 @@ $link-color: #00728d;
   margin-bottom: 1rem;
   opacity: 0.3;
 }
+.go-to-link-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .go-to-link {
   width: fit-content;
   font-size: medium;
   font-weight: bold;
   color: $link-color;
   text-decoration: underline;
-}
-.go-to-link-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
 }
 .go-to-link-icon {
   width: 15px;

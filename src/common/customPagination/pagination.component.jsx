@@ -86,19 +86,17 @@ const Pagination = (props) => {
 
     const renderPageNumbers = () => {
         return pageNumbers.map(number => {
-            {
-                return (
-                    (number >= lowerBound && number <= upperBound) ?
-                        <li className={`${number === currentPage ? 'active' : ''}`} style={props.liClass ? props.liClass : null}
-                            key={number}
-                            id={number}
-                            onClick={handleClick}
-                        >
-                            {number}
-                        </li>
-                        : ''
-                );
-            }
+            return (
+                (number >= lowerBound && number <= upperBound) ?
+                    <li className={`${number === currentPage ? 'active' : ''}`} style={props.liClass ? props.liClass : null}
+                        key={number}
+                        id={number}
+                        onClick={handleClick}
+                    >
+                        {number}
+                    </li>
+                    : ''
+            );
         })
     }
 

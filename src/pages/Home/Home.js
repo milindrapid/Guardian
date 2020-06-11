@@ -16,7 +16,8 @@ import UserNameBar from "../../components/userNameBar/UserNameBar.Component";
 import ImportantNotice from "../../components/importantNotice/ImportantNotice";
 import GuardianUpdates from '../../components/GuardianUpdates/GuardianUpdates';
 import RecentActivity from '../../components/recentActivity/RecentActivity.Component';
-import EventCard from '../../components/EventCard/EventCard.Component';
+import EventCard from '../../components/events/EventCard/EventCard.Component';
+import Events from '../../components/events/Events';
 
 
 const Home = () => {
@@ -66,27 +67,6 @@ const Home = () => {
     alert(link);
   };
 
-  const eventCardClick = () => {
-    alert("Event")
-  }
-
-  const showEventsList = () => {
-
-    return (
-      <div className="event-container">
-        <span className="main-title">Events</span>
-        <ul className="event-data-container">
-          {UPCOMING_EVENT.map(event => (
-            <EventCard
-              eventDetails={event}
-              onItemClick={eventCardClick}
-            />
-          ))}
-        </ul>
-      </div>
-    )
-  }
-
   return (
     <div className="App">
       <Search searchCallBack={getSearchResult} onSearchMenuIconClick={onSearchMenuIconClick} />
@@ -96,7 +76,7 @@ const Home = () => {
       <div className="hrz-line" />
       <RecentActivity />
       <GuardianUpdates data={UPDATES_FROM_GUARDIAN} onItemClick={onItemClick} />
-      {showEventsList()}
+      <Events eventsData={UPCOMING_EVENT} onItemClick={onItemClick} />
 
       {/* {loading && <SkeletonCard />}
       {!loading &&

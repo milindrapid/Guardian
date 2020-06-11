@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   background-color: #1C6EF2;
   vertical-align: middle;
-  padding: .75rem;
+  padding: .5rem;
   position: relative;
 }
 .info-icon {
@@ -17,17 +17,21 @@
 .info-text {
   text-align: center;
   color: white;
-  font-size: medium;
+  font-size: 20px;
   align-self: center;
   padding-left: 10px;
   margin-top: 8px;
+  font-weight: normal;
+  font-style:normal;
 }
 .info-link {
   color: white;
-  font-size: medium;
+  font-size: 20px;
   text-decoration: underline;
   cursor: pointer;
   align-self: center;
+  font-weight: normal;
+  font-style:normal;
   padding-left: 5px;
   padding-top: 8px;
 }
