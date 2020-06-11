@@ -1,5 +1,6 @@
 import React from 'react';
 import './GuradianUpdates.scss';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const GuradianUpdates = (props) => {
 
@@ -12,7 +13,9 @@ const GuradianUpdates = (props) => {
         return (
             props.data.map(update => (
                 <div className="data-content">
-                    <img className="close-image" src={require('../../images/close.svg')} alt="close" />
+                    <div className="close-image">
+                        <FontAwesomeIcon icon="times" />
+                    </div>
                     <label className="item-title">{update.title}</label>
                     <label className="item-link" onClick={() => onItemClick(update.link)}>{update.link}</label>
                     <label className="item-content">{update.content}</label>

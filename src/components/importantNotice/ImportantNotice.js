@@ -1,5 +1,6 @@
 import React from 'react';
 import './ImportantNotice.scss';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const importantNotice = (props) => {
 
@@ -7,20 +8,16 @@ const importantNotice = (props) => {
         props.close()
     }
 
-    const moreInfo = () => {
-        alert('More Information')
-    }
-
     return (
         <div className="info-notice-container">
-            <img className="info-icon" src={require('../../images/info.svg')} alt="info" />
+            <div className="info-icon">
+                <FontAwesomeIcon icon="info-circle" />
+            </div>
             <label className="info-text">Information alert message goes here.</label>
-            <label className="info-link" onClick={moreInfo}>More Information</label>
-            <img
-                className="info-close-icon"
-                src={require('../../images/white-close.svg')}
-                onClick={closeNotice}
-                alt="close" />
+            <a className="info-link" href={props.url}>More Information</a>
+            <div className="info-close-icon">
+                <FontAwesomeIcon icon="times" onClick={closeNotice} />
+            </div>
         </div >
     )
 }

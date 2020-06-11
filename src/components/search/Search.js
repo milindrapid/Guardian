@@ -5,6 +5,7 @@ import EmailIcon from '../../images/email.svg';
 import CalendarIcon from '../../images/calendar.svg';
 import ActivityIcon from '../../images/activity.svg';
 import GridIcon from '../../images/grid.svg';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Search = (props) => {
 
@@ -26,8 +27,12 @@ const Search = (props) => {
                 type="text"
                 placeholder="Search Guardian Online..."
                 onKeyPress={searchCallBack} />
-            <img className="search-menu-icon" src={EmailIcon} onClick={() => onMenuIconClick(1)} alt="email" />
-            <img className="search-menu-icon" src={CalendarIcon} onClick={() => onMenuIconClick(2)} alt="calendar" />
+            <div className="search-menu-font">
+                <FontAwesomeIcon icon="envelope-open-text" onClick={() => onMenuIconClick(1)} />
+            </div>
+            <div className="search-menu-font">
+                <FontAwesomeIcon icon="calendar-alt" onClick={() => onMenuIconClick(2)} />
+            </div>
             <img className="search-menu-icon" src={ActivityIcon} onClick={() => onMenuIconClick(3)} alt="activity" />
             <img className="search-menu-icon" src={GridIcon} onClick={() => onMenuIconClick(4)} alt="grid" />
 
