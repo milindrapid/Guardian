@@ -14,8 +14,13 @@ const props = {
   callToMore: "",
 };
 
-export const ToStorybook = () => <ToolCard {...props} />;
+export const ToStorybook = () => <ToolCard />;
+export const ToStorybookWithProp = () => <ToolCard {...props} />;
 
-ToStorybook.story = {
-  name: "ToolCard",
-};
+// ToStorybook.story = {
+//   name: "Tool card",
+// };
+
+// ToStorybookWithProp.story = {
+//   name: "Tool card with props",
+// };

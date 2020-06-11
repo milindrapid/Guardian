@@ -1,0 +1,48 @@
+@import "../../stylesheet/color";
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li {
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.sidebar {
+  width: 250px;
+  min-height: calc(100vh);
+  box-shadow: $mid-grey 1px 1px 1px;
+  background-color: $primary;
+  .sidebar-logo {
+    height: auto;
+    width: 150px;
+  }
+  a {
+    text-decoration: none;
+    color: $white;
+    &:active,
+    &:hover,
+    &:focus {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+  // & > ul > li {
+  // border-bottom: $mid-grey 1px solid;
+  // }
+  .sidebar__item {
+    display: flex;
+    & + ul {
+      padding-top: 0.75rem;
+    }
+  }
+  .sidebar__expand-btn {
+    margin-left: auto;
+    &.active {
+      color: $primary;
+    }
+  }
+}

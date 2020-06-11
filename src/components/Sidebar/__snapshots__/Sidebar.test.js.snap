@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar Component Sidebar Component should render correctly 1`] = `
+<div
+  className="sidebar"
+>
+  <img
+    alt="Guardian"
+    className="sidebar-logo"
+    src="logo.png"
+  />
+  <ul>
+    <SidebarItem
+      depth={0}
+      depthStep={10}
+      description={null}
+      id="submenu-0"
+      isExpanded={false}
+      is_expanded={false}
+      key="submenu-00"
+      name="Home"
+      position={50}
+      to="/"
+      url_str={Object {}}
+      url_string="/"
+    />
+    <SidebarItem
+      depth={0}
+      depthStep={10}
+      description={null}
+      id="submenu-1"
+      isExpanded={false}
+      is_expanded={false}
+      key="submenu-11"
+      name="Tools"
+      position={50}
+      to="/tools"
+      url_str={Object {}}
+      url_string="/tools"
+    />
+    <SidebarItem
+      depth={0}
+      depthStep={10}
+      description={null}
+      id="submenu-2"
+      isExpanded={false}
+      is_expanded={false}
+      key="submenu-22"
+      name="Etc"
+      position={50}
+      to="/"
+      url_str={Object {}}
+      url_string="/"
+    />
+  </ul>
+</div>
+`;
