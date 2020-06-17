@@ -1,0 +1,16 @@
+.all-saved-resource-container {
+    margin-top: 2rem;
+    background-color: #fff;
+    padding: 2rem 1rem;
+    h3 {
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+    .folder-container {   
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}

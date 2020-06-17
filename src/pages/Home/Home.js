@@ -18,6 +18,7 @@ import RecentActivity from "../../components/recentActivity/RecentActivity.Compo
 import EventCard from "../../components/events/EventCard/EventCard.Component";
 import Events from "../../components/events/Events";
 import SavedResources from '../../components/SavedResources/SavedResources.Component';
+import AllSavedResources from '../../components/AllSavedResources/AllSavedResources.Component';
 
 const Home = () => {
   // const [videos, setVideos] = useState([]);
@@ -97,6 +98,8 @@ const Home = () => {
       <ToolCard /> */}
 
       <SavedResources />
+
+      <AllSavedResources />
 
       <Pagination
         currentPage={2}
