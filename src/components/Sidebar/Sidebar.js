@@ -2,12 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import SidebarItem from "./SidebarItem";
 import "./Sidebar.scss";
-import logo from "../../images/logo.png";
 
 const Sidebar = ({ items, depthStep, depth }) => {
   return (
     <div className="sidebar">
-      <img className="sidebar-logo" src={logo} alt="Guardian" />
       <ul>
         {items.map((sidebarItem, index) => (
           <SidebarItem
