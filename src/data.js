@@ -111,9 +111,9 @@ export const UPDATES_FROM_GUARDIAN = [
 ]
 
 export const UPCOMING_EVENT = [
-  { id: 1, event: 'Smart Office Getting Started', date: 'May 11, 2020', time: '2:00PM EST' },
-  { id: 2, event: 'Building Blocks: Delivery Policies Electronically and Efficiantly ', date: 'May 11, 2020', time: '2:00PM EST' },
-  { id: 3, event: 'Smart Office Maximizing Contact Information', date: 'May 11, 2020', time: '2:00PM EST' },
-  { id: 4, event: 'Leveling Up', date: 'May 11, 2020', time: '2:00PM EST' },
-  { id: 5, event: 'New Product Introduction', date: 'May 11, 2020', time: '2:00PM EST' }
+  { id: 1, event: 'Smart Office Getting Started', date: 'May 11, 2020', time: '2:00PM EST', dateTime: 'May 11, 2020 | 2:00PM EST', eventTitle: 'Smart Office Getting Started' },
+  { id: 2, event: 'Building Blocks: Delivery Policies Electronically and Efficiantly ', date: 'May 11, 2020', time: '2:00PM EST', dateTime: 'May 11, 2020 | 2:00PM EST', eventTitle: 'Building Blocks: Delivery Policies Electronically and Efficiantly ' },
+  { id: 3, event: 'Smart Office Maximizing Contact Information', date: 'May 11, 2020', time: '2:00PM EST', dateTime: 'May 11, 2020 | 2:00PM EST', eventTitle: 'Smart Office Maximizing Contact Information' },
+  { id: 4, event: 'Leveling Up', date: 'May 11, 2020', time: '2:00PM EST', dateTime: 'May 11, 2020 | 2:00PM EST', eventTitle: 'Leveling Up' },
+  { id: 5, event: 'New Product Introduction', date: 'May 11, 2020', time: '2:00PM EST', dateTime: 'May 11, 2020 | 2:00PM EST', eventTitle: 'New Product Introduction' }
 ]
