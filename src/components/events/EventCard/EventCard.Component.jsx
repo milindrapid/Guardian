@@ -124,25 +124,29 @@ const EventCard = (props) => {
 }
 
 EventCard.propTypes = {
-    eventId: PropTypes.number.isRequired,
-    imageUrl: PropTypes.string.isRequired,
-    eventTitle: PropTypes.string.isRequired,
-    eventDescription: PropTypes.string,
-    redirectUrl: PropTypes.string,
-    dateTime: PropTypes.string.isRequired,
-    isLive: PropTypes.bool.isRequired,
-    learnMoreUrl: PropTypes.string,
-    eventImageUrl: PropTypes.string,
-    roles: PropTypes.array,
-    onItemClick: PropTypes.func.isRequired
+    eventDetails: PropTypes.shape({
+            eventId: PropTypes.number.isRequired,
+            imageUrl: PropTypes.string.isRequired,
+            eventTitle: PropTypes.string.isRequired,
+            eventDescription: PropTypes.string,
+            redirectUrl: PropTypes.string,
+            dateTime: PropTypes.string.isRequired,
+            isLive: PropTypes.bool.isRequired,
+            learnMoreUrl: PropTypes.string,
+            eventImageUrl: PropTypes.string,
+            roles: PropTypes.array,
+            onItemClick: PropTypes.func.isRequired
+        })
 }
 
 EventCard.defaultProps = {
-    eventDescription: "",
-    redirectUrl: "",
-    learnMoreUrl: "/",
-    eventImageUrl: "",
-    roles: []
+    eventDetails: {
+        eventDescription: "",
+        redirectUrl: "",
+        learnMoreUrl: "/",
+        eventImageUrl: "",
+        roles: []
+    }
 }
 
 export default EventCard;
