@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import '../../../fontawesome';
 
 const EventCardContainer = styled.div`
     font-family: Effra;
