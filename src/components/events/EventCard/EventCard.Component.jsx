@@ -13,7 +13,7 @@ const EventCardContainer = styled.div`
     margin: .55rem .75rem .75rem .55rem;
     img {
         width: 100%;
-        height: 9rem;
+        height: 8rem;
     }
 `;
 const DataView = styled.div`
@@ -22,7 +22,7 @@ const DataView = styled.div`
     padding: 0.5rem .75rem .5rem .75rem;
 `;
 const EventDetails = styled.div`
-    height: 4.4rem;
+    height: 5.5rem;
     margin: 0.2rem 0;
     overflow-y: auto;
 `;
@@ -70,11 +70,14 @@ const EventMore = styled.div`
         margin-top: .7rem;
     }
 `;
-const StreamIcon = styled.div`
+const StreamIcon = styled.span`
+    display: block;
     width: 20px;
     height: 20px;
+    text-align: left;
 `;
-const LiveIcon = styled.div`
+const LiveIcon = styled.span`
+    display: block;
     width: 20px;
     height: 20px;
     text-align: center;
@@ -104,13 +107,16 @@ const EventCard = (props) => {
                 <EventMore>
                     <a href={learnMoreUrl} >Learn more</a>
                     <label>
-                        <StreamIcon>
-                            <FontAwesomeIcon icon="wifi" />
-                        </StreamIcon>
-                        {/* <LiveIcon>
-                            <FontAwesomeIcon icon="male" />
-                        </LiveIcon> */}
-                        STREAMING
+                        {isLive ?
+                            <LiveIcon>
+                                <FontAwesomeIcon icon="male" />
+                            </LiveIcon>
+                            :
+                            <StreamIcon>
+                                <FontAwesomeIcon icon="wifi" />
+                            </StreamIcon>
+                        }
+                        {isLive? 'LIVE': 'STREAMING'}
                     </label>
                 </EventMore>
             </DataView>
@@ -129,8 +135,7 @@ EventCard.propTypes = {
         isLive: PropTypes.bool.isRequired,
         learnMoreUrl: PropTypes.string,
         eventImageUrl: PropTypes.string,
-        roles: PropTypes.array,
-        onItemClick: PropTypes.func.isRequired
+        roles: PropTypes.array
     })
 };
 
