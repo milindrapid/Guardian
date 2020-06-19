@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import streamIconImage from '../../../images/streaming.svg';
-import liveIconImage from '../../../images/ic-live.svg';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const EventCardContainer = styled.div`
     font-family: Effra;
@@ -71,22 +70,14 @@ const EventMore = styled.div`
         margin-top: .7rem;
     }
 `;
-const StreamIcon = styled.span`
+const StreamIcon = styled.div`
     width: 20px;
     height: 20px;
-    background: url(${streamIconImage});
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-right: 0.5rem;
 `;
-const LiveIcon = styled.span`
-    width: 14px;
-    height: 14px;
-    background: url(${liveIconImage});
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-right: 0.5rem;
-    margin-top: 0.2rem;
+const LiveIcon = styled.div`
+    width: 20px;
+    height: 20px;
+    text-align: center;
 `;
 
 const EventCard = (props) => {
@@ -113,8 +104,12 @@ const EventCard = (props) => {
                 <EventMore>
                     <a href={learnMoreUrl} >Learn more</a>
                     <label>
-                        <StreamIcon />
-                        {/* <LiveIcon /> */}
+                        <StreamIcon>
+                            <FontAwesomeIcon icon="wifi" />
+                        </StreamIcon>
+                        {/* <LiveIcon>
+                            <FontAwesomeIcon icon="male" />
+                        </LiveIcon> */}
                         STREAMING
                     </label>
                 </EventMore>
@@ -125,19 +120,19 @@ const EventCard = (props) => {
 
 EventCard.propTypes = {
     eventDetails: PropTypes.shape({
-            eventId: PropTypes.number.isRequired,
-            imageUrl: PropTypes.string.isRequired,
-            eventTitle: PropTypes.string.isRequired,
-            eventDescription: PropTypes.string,
-            redirectUrl: PropTypes.string,
-            dateTime: PropTypes.string.isRequired,
-            isLive: PropTypes.bool.isRequired,
-            learnMoreUrl: PropTypes.string,
-            eventImageUrl: PropTypes.string,
-            roles: PropTypes.array,
-            onItemClick: PropTypes.func.isRequired
-        })
-}
+        eventId: PropTypes.number.isRequired,
+        imageUrl: PropTypes.string.isRequired,
+        eventTitle: PropTypes.string.isRequired,
+        eventDescription: PropTypes.string,
+        redirectUrl: PropTypes.string,
+        dateTime: PropTypes.string.isRequired,
+        isLive: PropTypes.bool.isRequired,
+        learnMoreUrl: PropTypes.string,
+        eventImageUrl: PropTypes.string,
+        roles: PropTypes.array,
+        onItemClick: PropTypes.func.isRequired
+    })
+};
 
 EventCard.defaultProps = {
     eventDetails: {
@@ -147,6 +142,6 @@ EventCard.defaultProps = {
         eventImageUrl: "",
         roles: []
     }
-}
+};
 
 export default EventCard;
