@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import '../../../fontawesome';
 
-const EventCardContainer = styled.div`
+export const EventCardContainer = styled.div`
     font-family: Effra;
     border: 1px solid #e9e9e7;
     height: 17rem;
@@ -17,17 +17,17 @@ const EventCardContainer = styled.div`
         height: 8rem;
     }
 `;
-const DataView = styled.div`
+export const EventDataView = styled.div`
     position: relative;
     flex-grow: 1;
     padding: 0.5rem .75rem .5rem .75rem;
 `;
-const EventDetails = styled.div`
+export const EventDetails = styled.div`
     height: 5.5rem;
     margin: 0.2rem 0;
     overflow-y: auto;
 `;
-const EventTitle = styled.span`
+export const EventTitle = styled.span`
     font-family: inherit;
     font-size: 1rem;
     font-weight: bold;
@@ -40,7 +40,7 @@ const EventTitle = styled.span`
     display: block;
     color: #2B2B2B;
 `;
-const EventShedule = styled.span`
+export const EventShedule = styled.span`
     font-family: inherit;
     font-weight: normal;
     line-height: 1.4rem;
@@ -49,7 +49,7 @@ const EventShedule = styled.span`
     font-size: 1rem;
     color: #2b2b2b;
 `;
-const EventMore = styled.div`
+export const EventMore = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -71,13 +71,13 @@ const EventMore = styled.div`
         margin-top: .7rem;
     }
 `;
-const StreamIcon = styled.span`
+export const StreamIcon = styled.span`
     display: block;
     width: 20px;
     height: 20px;
     text-align: left;
 `;
-const LiveIcon = styled.span`
+export const LiveIcon = styled.span`
     display: block;
     width: 20px;
     height: 20px;
@@ -100,7 +100,7 @@ const EventCard = (props) => {
     return (
         <EventCardContainer>
             <img src={require('../../../images/sample-image.png')} alt="" />
-            <DataView>
+            <EventDataView>
                 <EventDetails>
                     <EventTitle onClick={() => props.onItemClick(eventTitle)}>{eventTitle}</EventTitle>
                     <EventShedule>{dateTime}</EventShedule>
@@ -120,7 +120,7 @@ const EventCard = (props) => {
                         {isLive? 'LIVE': 'STREAMING'}
                     </label>
                 </EventMore>
-            </DataView>
+            </EventDataView>
         </EventCardContainer>
     );
 }
