@@ -5,7 +5,9 @@ import EventCard, { EventCardContainer,
   EventTitle,
   EventShedule,
   EventMore,
-  StreamIcon } from "./EventCard.Component";
+  StreamIcon,
+  LiveIcon
+ } from "./EventCard.Component";
 import { shallow } from "enzyme";
 
 describe("EventCard component", () => {
@@ -42,5 +44,12 @@ describe("EventCard component", () => {
     expect(wrapperComponent.find("a").text()).toBe("Learn more");
     expect(wrapperComponent.find(EventTitle).text()).toBe("Smart Office Getting Started");
     expect(wrapperComponent.find("label").text()).toMatch("STREAMING");
+  });
+
+  it("should render children components correclty", () => {
+    props.isLive = true;
+    wrapperComponent.setProps({eventDetails: props});
+    expect(wrapperComponent.find(LiveIcon)).toHaveLength(1);
+    expect(wrapperComponent.find("label").text()).toMatch("LIVE");
   });
 });
