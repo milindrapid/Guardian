@@ -86,16 +86,10 @@ export const LiveIcon = styled.span`
 
 const EventCard = (props) => {
     const {
-        eventId,
-        imageUrl,
         eventTitle,
-        eventDescription,
-        redirectUrl,
         dateTime,
         isLive,
         learnMoreUrl,
-        eventImageUrl,
-        roles
     } = props.eventDetails;
     return (
         <EventCardContainer>
@@ -127,26 +121,16 @@ const EventCard = (props) => {
 
 EventCard.propTypes = {
     eventDetails: PropTypes.shape({
-        eventId: PropTypes.number.isRequired,
-        imageUrl: PropTypes.string.isRequired,
         eventTitle: PropTypes.string.isRequired,
-        eventDescription: PropTypes.string,
-        redirectUrl: PropTypes.string,
         dateTime: PropTypes.string.isRequired,
         isLive: PropTypes.bool.isRequired,
         learnMoreUrl: PropTypes.string,
-        eventImageUrl: PropTypes.string,
-        roles: PropTypes.array
     })
 };
 
 EventCard.defaultProps = {
     eventDetails: {
-        eventDescription: "",
-        redirectUrl: "",
         learnMoreUrl: "/",
-        eventImageUrl: "",
-        roles: []
     }
 };
 
