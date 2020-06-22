@@ -32,8 +32,22 @@ const liveProps = {
     roles: [],
 };
 
+const eventTitleLong = {
+    eventId: 1,
+    imageUrl: "",
+    eventTitle: "Smart Office Getting Started Smart Office Getting Started Smart Office Getting Started Smart Office Getting Started",
+    eventDescription: "Smart Office Getting Started",
+    redirectUrl: "",
+    dateTime: "May 11, 2020 | 2:00PM EST",
+    isLive: true,
+    learnMoreUrl: "",
+    eventImageUrl: "",
+    roles: [],
+};
+
 export const StreamingEventCard = () => <EventCard eventDetails={streamingProps} />
 export const LiveEventCard = () => <EventCard eventDetails={liveProps} />
+export const EventCardLongTitle = () => <EventCard eventDetails={eventTitleLong} />
 
 StreamingEventCard.story = {
     name: 'Streaming View'
@@ -41,4 +55,8 @@ StreamingEventCard.story = {
 
 LiveEventCard.story = {
     name: 'Live View'
+};
+
+EventCardLongTitle.story = {
+    name: 'Event Card with Long Title'
 };

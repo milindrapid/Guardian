@@ -35,7 +35,7 @@ export const EventTitle = styled.span`
     cursor: pointer;
     line-height: 1.2rem;
     position: relative;
-    margin-bottom: 5px;
+    margin-bottom: 0.313rem;
     padding: 0;
     display: block;
     color: #2B2B2B;
@@ -44,8 +44,8 @@ export const EventShedule = styled.span`
     font-family: inherit;
     font-weight: normal;
     line-height: 1.4rem;
-    margin-right: 2px;
-    margin-left: 2px;
+    margin-right: 0.125rem;
+    margin-left: 0.125rem;
     font-size: 1rem;
     color: #2b2b2b;
 `;
@@ -65,7 +65,7 @@ export const EventMore = styled.div`
     }
     label {
         display: inline-flex;
-        font-size: 12px;
+        font-size: 0.75rem;
         font-style: normal;
         font-weight: bold;
         margin-top: .7rem;
@@ -73,14 +73,14 @@ export const EventMore = styled.div`
 `;
 export const StreamIcon = styled.span`
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
     text-align: left;
 `;
 export const LiveIcon = styled.span`
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
     text-align: center;
 `;
 
