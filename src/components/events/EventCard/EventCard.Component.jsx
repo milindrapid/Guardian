@@ -125,6 +125,7 @@ EventCard.propTypes = {
         dateTime: PropTypes.string.isRequired,
         isLive: PropTypes.bool.isRequired,
         learnMoreUrl: PropTypes.string,
+        onItemClick: PropTypes.func
     })
 };
 
