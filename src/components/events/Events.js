@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import '../../fontawesome';
-import './Events.scss';
 import EventCard from './EventCard/EventCard.Component';
 
 const EventsContainer = styled.div`
@@ -23,7 +22,8 @@ const EventsContainer = styled.div`
     }
 `;
 EventsContainer.displayName = 'EventsContainer';
-const MainTitle = styled.span`
+
+const EventsTitle = styled.span`
     font-style: normal;
     font-size: 2rem;
     line-height: 1.625rem;
@@ -33,7 +33,8 @@ const MainTitle = styled.span`
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 `;
-MainTitle.displayName = 'MainTitle';
+EventsTitle.displayName = 'EventsTitle';
+
 const EventPageLink = styled.div`
     display: flex;
     flex-direction: row;
@@ -52,6 +53,7 @@ const EventPageLink = styled.div`
     }
 `;
 EventPageLink.displayName = 'EventPageLink';
+
 const LinkIconContainer = styled.span`
     display: block;
     width: 1rem;
@@ -61,7 +63,7 @@ const LinkIconContainer = styled.span`
     font-weight: 900;
     font-size: 0.938rem;
     line-height: 1.063rem;
-    color: #00728d;
+    color: #0D3F5E;
 `;
 LinkIconContainer.displayName = 'LinkIconContainer';
 
@@ -70,7 +72,7 @@ const Events = (props) => {
     const { eventsData, onItemClick } = props;
 
     const eventCardClick = (event) => {
-        onItemClick(event)
+        onItemClick(event);
     }
 
     const getEvents = () => {
@@ -86,7 +88,7 @@ const Events = (props) => {
 
     return (
         <EventsContainer>
-            <MainTitle>Upcoming Events</MainTitle>
+            <EventsTitle>Upcoming Events</EventsTitle>
             <ul>
                 {getEvents()}
             </ul>
@@ -95,7 +97,6 @@ const Events = (props) => {
                 <LinkIconContainer>
                     <FontAwesomeIcon icon="arrow-right" />
                 </LinkIconContainer>
-                {/* <img className="ic-goto" src={require('../../images/right-arrow.svg')} alt="close" /> */}
             </EventPageLink>
         </EventsContainer>
     )
@@ -109,6 +110,5 @@ Events.propTypes = {
 Events.defaultProps = {
     onItemClick: () => {}
 };
-
 
 export default Events;
