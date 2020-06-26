@@ -1,0 +1,56 @@
+.saved-resource-container {
+    margin-top: 2rem;
+    background-color: #fff;
+    padding: 2rem 1rem;
+    h4 {
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+    .folder-container {   
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .ic-right-arrow {
+        display: block;
+        background-image: url('../../resources/icons/icon-next.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 0.9rem;
+        height: 0.9rem;
+        margin: 0.4rem 0 0.5rem 0.5rem;
+    }
+    .see-all {
+        margin-top: 1rem;
+        button {
+            display: flex;
+            text-align: center;
+            background: transparent;
+            border: none;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-decoration: underline;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    .recent-data-container {
+        margin-top: 1rem;
+        display: flex;
+        padding: 0 7rem;
+    }
+    hr {
+        margin: 2rem -1rem;
+    }
+    .help-section {
+        text-align: center;
+        .contact-options {
+            display: flex;
+            justify-content: space-around;
+            padding: 1rem 6rem;
+        }
+    }
+}

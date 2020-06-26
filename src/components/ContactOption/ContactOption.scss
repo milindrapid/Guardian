@@ -1,0 +1,18 @@
+.contact-item {
+    flex: 1;
+    text-align: left;
+    padding: 0 1rem;
+    .contact-circle {
+        height: 5rem;
+        width: 5rem;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    h5 {
+        margin-top: 0.5rem;
+    }
+    .contact-desc {
+        font-size: 0.7rem;
+    }
+}
