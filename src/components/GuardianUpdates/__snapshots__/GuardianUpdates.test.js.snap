@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GuardianUpdates component Global header component should render correclty 1`] = `
+<styled.div>
+  <mainTitle>
+    Updates from Guardian
+  </mainTitle>
+  <ul>
+    <styled.div>
+      <closeImage>
+        <FontAwesomeIcon
+          border={false}
+          className=""
+          fixedWidth={false}
+          flip={null}
+          icon="times"
+          inverse={false}
+          listItem={false}
+          mask={null}
+          pull={null}
+          pulse={false}
+          rotation={null}
+          size={null}
+          spin={false}
+          swapOpacity={false}
+          symbol={false}
+          title=""
+          transform={null}
+        />
+      </closeImage>
+      <h1>
+        Marketing
+      </h1>
+      <a
+        href="/"
+      >
+        Coronavirus and Market Volatility Playbook
+      </a>
+      <span>
+        Your resource of managing coronavirus and market volatility
+      </span>
+      <horizontelLine />
+    </styled.div>
+  </ul>
+  <styled.div>
+    <a
+      href="/"
+    >
+      Go to Resource Center
+    </a>
+    <rightArrow>
+      <FontAwesomeIcon
+        border={false}
+        className=""
+        fixedWidth={false}
+        flip={null}
+        icon="arrow-right"
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size={null}
+        spin={false}
+        swapOpacity={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
+    </rightArrow>
+  </styled.div>
+</styled.div>
+`;

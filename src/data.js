@@ -117,3 +117,22 @@ export const UPCOMING_EVENT = [
   { id: 4, event: 'Leveling Up', date: 'May 11, 2020', time: '2:00PM EST' },
   { id: 5, event: 'New Product Introduction', date: 'May 11, 2020', time: '2:00PM EST' }
 ]
+
+export const TOPIC_CARD_DATA = [
+  {
+    title: "Performance Qualifications & Awards",
+    desc: "We've broken down requirements so you can spend time to figure it out, and more time growing your business"
+  },
+  {
+    title: "Client & Business Marketing",
+    desc: "Everything you need to know the requirements so you can spend time to figure it out to growing your business retaining such things and much more"
+  },
+  {
+    title: "Sales Training & Professional Development",
+    desc: "Everything you need to know the requirements so you can spend time to figure it out to growing your business retaining such things and much more"
+  },
+  {
+    title: "Compliance & Cyber Security",
+    desc: "Everything you need to know the requirements so you can spend time to figure it out to growing your business retaining such things and much more"
+  }
+]

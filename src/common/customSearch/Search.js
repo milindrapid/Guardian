@@ -1,6 +1,6 @@
 import React from 'react';
 import './Search.scss';
-import SearchIcon from '../../../Images/search-icon.svg';
+import SearchIcon from '../../images/search-icon.svg';
 
 const searchBar = (props) => {
 
@@ -11,7 +11,7 @@ const searchBar = (props) => {
     }
 
     return (
-        <div style={props.searchBarWidth} className="search-container">
+        <div style={props.searchBarCustomStyles} className="search-container">
             <img className="search-icon" src={SearchIcon} alt="search" />
             <input
                 className="search-input"
