@@ -9,7 +9,7 @@ import { dummyData, UPDATES_FROM_GUARDIAN, UPCOMING_EVENT } from "../../data";
 // import SkeletonCard from "../../components/SkeletonCard";
 // const Tag =React.lazy(()=>import(./components/SkeletonCard))
 import Pagination from "../../common/customPagination/pagination.component";
-import Search from "../../components/search/Search";
+import GlobalHeader from "../../components/search/GlobalHeader";
 // import ToolCard from "../../components/card/Tools.components";
 import UserNameBar from "../../components/userNameBar/UserNameBar.Component";
 import ImportantNotice from "../../components/importantNotice/ImportantNotice";
@@ -20,6 +20,33 @@ import Events from "../../components/events/Events";
 import SavedResources from '../../components/SavedResources/SavedResources.Component';
 import AllSavedResources from '../../components/AllSavedResources/AllSavedResources.Component';
 import AccessOldGol from '../../components/AccessOldGol/AccessOldGol';
+
+import ActivityIcon from '../../images/activity.svg';
+import GridIcon from '../../images/grid.svg';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+const globalHeaderIconList = [
+  {
+    id: 1,
+    name: "Email",
+    image: "envelope-open-text"
+  },
+  {
+    id: 2,
+    name: "Calender",
+    image: "calendar-alt"
+  },
+  {
+    id: 3,
+    name: "Activity",
+    image: "chart-line"
+  },
+  {
+    id: 4,
+    name: "Favorite Tools",
+    image: "th"
+  }
+];
 
 const Home = () => {
   // const [videos, setVideos] = useState([]);
@@ -71,13 +98,18 @@ const Home = () => {
 
   return (
     <div className="App">
-      <Search
+      <GlobalHeader
+        placeHolder={"Search Guardian Online..."}
         searchCallBack={getSearchResult}
         onSearchMenuIconClick={onSearchMenuIconClick}
       />
       <div className="hrz-line" />
       {showImportantNotice ? (
-        <ImportantNotice url="/#" close={closeImpNotice} />
+        <ImportantNotice
+          message="Information alert message goes here."
+          linkText="More Information"
+          url="/#"
+          close={closeImpNotice} />
       ) : null}
       <AccessOldGol />
       <UserNameBar userName="Taylor" />
