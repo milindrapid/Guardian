@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EventCard component Old GOL item rendered correctly 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.span>
+      <FontAwesomeIcon
+        border={false}
+        className=""
+        fixedWidth={false}
+        flip={null}
+        icon="chart-line"
+        inverse={false}
+        listItem={false}
+        mask={null}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size={null}
+        spin={false}
+        swapOpacity={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
+    </styled.span>
+    <a>
+      Book of Business
+    </a>
+  </styled.div>
+  <p>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  </p>
+</styled.div>
+`;
