@@ -19,6 +19,7 @@ import EventCard from "../../components/events/EventCard/EventCard.Component";
 import Events from "../../components/events/Events";
 import SavedResources from '../../components/SavedResources/SavedResources.Component';
 import AllSavedResources from '../../components/AllSavedResources/AllSavedResources.Component';
+import AccessOldGol from '../../components/AccessOldGol/AccessOldGol';
 
 const Home = () => {
   // const [videos, setVideos] = useState([]);
@@ -59,6 +60,7 @@ const Home = () => {
     }
   };
 
+
   const closeImpNotice = () => {
     setShowImportantNotice(false);
   };
@@ -77,6 +79,7 @@ const Home = () => {
       {showImportantNotice ? (
         <ImportantNotice url="/#" close={closeImpNotice} />
       ) : null}
+      <AccessOldGol />
       <UserNameBar userName="Taylor" />
       <div className="hrz-line" />
       <RecentActivity />

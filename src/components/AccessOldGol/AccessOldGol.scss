@@ -1,0 +1,25 @@
+.old-gol-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+.old-gol-header {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.625rem;
+    color: #0D3F5E;
+    padding: 0 2rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.old-gol-list {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    >* {
+        width: 50%;
+    }
+}
