@@ -20,6 +20,7 @@ import Events from "../../components/events/Events";
 import SavedResources from '../../components/SavedResources/SavedResources.Component';
 import AllSavedResources from '../../components/AllSavedResources/AllSavedResources.Component';
 import AccessOldGol from '../../components/AccessOldGol/AccessOldGol';
+import MultiLevelMenuContainer from '../../components/multiLevelMenuContainer/MultiLevelMenuContainer';
 
 import ActivityIcon from '../../images/activity.svg';
 import GridIcon from '../../images/grid.svg';
@@ -49,6 +50,7 @@ const globalHeaderIconList = [
 ];
 
 const Home = () => {
+
   // const [videos, setVideos] = useState([]);
   // const [loading, setLoading] = useState(false);
   const [showImportantNotice, setShowImportantNotice] = useState(true);
@@ -112,6 +114,7 @@ const Home = () => {
           close={closeImpNotice} />
       ) : null}
       <AccessOldGol />
+      <MultiLevelMenuContainer />
       <UserNameBar userName="Taylor" />
       <div className="hrz-line" />
       <RecentActivity />
