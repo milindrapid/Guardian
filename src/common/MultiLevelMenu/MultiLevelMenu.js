@@ -1,20 +1,27 @@
 import React, { useState } from 'react';
 
 const MultilevelMenu = (props) => {
-    const { onMenuChange } = props;
-    const [menuList, updateMenuList] = useState(props.menuList);
+    const { menuList, onMenuChange } = props;
+    const [expandedList, updateExpandedList] = useState([]);
 
     const onMenuClick = (event, menuItem) => {
         event.stopPropagation();
-        let newArr = [...menuList];
-        newArr.map((element) => {
-            if (element.menuId === menuItem.menuId) {
-                element.isExpanded = !element.isExpanded;
+        let newArr = [...expandedList];
+        if (newArr.find(function (element) { return element.menuId === menuItem.menuId })) {
+            newArr = newArr.filter((ele) => {
+                return ele.depthLevel < menuItem.depthLevel
+            });
+        } else {
+            if (newArr.find(function (element) { return element.depthLevel === menuItem.depthLevel })) {
+                newArr = newArr.filter((ele) => {
+                    return ele.depthLevel < menuItem.depthLevel
+                });
             }
-        });
-        updateMenuList(newArr);
+            newArr.push(menuItem);
+        }
+        updateExpandedList(newArr);
         onMenuChange({ selectedMenu: menuItem });
-    }
+    };
 
     return (
         <ul>
@@ -22,7 +29,7 @@ const MultilevelMenu = (props) => {
                 menuList.map((menuItem) => {
                     return <li onClick={(event) => onMenuClick(event, menuItem)}>
                         {menuItem.menuTitle}
-                        {menuItem.subMenu && menuItem.subMenu.length > 0 && menuItem.isExpanded &&
+                        {menuItem.subMenu && menuItem.subMenu.length > 0 && expandedList.find(function (element) { return element.menuId === menuItem.menuId }) &&
                             <MultilevelMenu menuList={menuItem.subMenu} onMenuChange={onMenuChange} />
                         }
                     </li>;
