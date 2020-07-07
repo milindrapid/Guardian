@@ -45,12 +45,15 @@
     hr {
         margin: 2rem -1rem;
     }
-    .help-section {
+    .footer-section {
         text-align: center;
+        background-color: #0d3f5e;
+        color: #fff;
+        padding: 1rem;
         .contact-options {
             display: flex;
             justify-content: space-around;
-            padding: 1rem 6rem;
+            padding: 1rem 5rem;
         }
     }
 }

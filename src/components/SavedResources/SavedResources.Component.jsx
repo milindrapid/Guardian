@@ -102,14 +102,14 @@ const SavedResources = (props) => {
                 <RecentData title="Recently Viewed" itemList={viewedList} />
             </div>
             <hr></hr>
-            <div className="help-section">
+            <div className="footer-section">
                 <h4>Didn't find what you needed?</h4>
                 <div className="contact-options">
-                {contactList && contactList.length? 
-                    contactList.map((item) => {
-                        return <ContactOption contactItem={item} />
-                    })
-                : ''}
+                    {contactList && contactList.length ?
+                        contactList.map((item) => {
+                            return <ContactOption contactItem={item} />
+                        })
+                        : ''}
                 </div>
             </div>
         </div>
