@@ -5,7 +5,7 @@ const getSubMenu = (menuItem) => {
     switch (menuItem.menuId) {
         case 'L1': return [{
             menuId: 'L2',
-            menuTitle: 'L2',
+            menuTitle: 'Events',
             breadCrumpTrial: '',
             pageTitle: '',
             depthLevel: 2,
@@ -58,7 +58,7 @@ const getSubMenu = (menuItem) => {
         }];
         case 'L9': return [{
             menuId: 'L10',
-            menuTitle: 'L10',
+            menuTitle: 'Product Resources',
             breadCrumpTrial: '',
             pageTitle: '',
             depthLevel: 2,
@@ -66,14 +66,14 @@ const getSubMenu = (menuItem) => {
         }]
         case 'L10': return [{
             menuId: 'L11',
-            menuTitle: 'L11',
+            menuTitle: 'Life Insurance',
             breadCrumpTrial: '',
             pageTitle: '',
             depthLevel: 3,
             subMenu: []
         }, {
             menuId: 'L14',
-            menuTitle: 'L14',
+            menuTitle: 'Disability Insurance',
             breadCrumpTrial: '',
             pageTitle: '',
             depthLevel: 3,
@@ -81,14 +81,14 @@ const getSubMenu = (menuItem) => {
         }];
         case 'L11': return [{
             menuId: 'L12',
-            menuTitle: 'L12',
+            menuTitle: 'Product Portfolio',
             breadCrumpTrial: '',
             pageTitle: '',
             depthLevel: 4,
             subMenu: []
         }, {
             menuId: 'L13',
-            menuTitle: 'L13',
+            menuTitle: 'Marketing',
             breadCrumpTrial: '',
             pageTitle: '',
             depthLevel: 4,
@@ -96,14 +96,14 @@ const getSubMenu = (menuItem) => {
         }];
         case 'L14': return [{
             menuId: 'L15',
-            menuTitle: 'L15',
+            menuTitle: 'Client Services',
             breadCrumpTrial: '',
             pageTitle: '',
             depthLevel: 4,
             subMenu: []
         }, {
             menuId: 'L16',
-            menuTitle: 'L16',
+            menuTitle: 'Compliance',
             breadCrumpTrial: '',
             pageTitle: '',
             depthLevel: 4,
@@ -116,14 +116,14 @@ const getSubMenu = (menuItem) => {
 const MultiLevelMenuContainer = (props) => {
     const [menuList, setMenuList] = useState([{
         menuId: 'L1',
-        menuTitle: 'L1',
+        menuTitle: 'Favorites',
         breadCrumpTrial: '',
         pageTitle: '',
         depthLevel: 1,
         subMenu: []
     }, {
         menuId: 'L9',
-        menuTitle: 'L9',
+        menuTitle: 'Resources',
         breadCrumpTrial: '',
         pageTitle: '',
         depthLevel: 1,

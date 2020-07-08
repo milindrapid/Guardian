@@ -3,12 +3,14 @@ import './SavedResources.scss';
 import FolderComponent from '../FolderComponent/FolderComponent.Component';
 import RecentData from '../RecentData/RecentData.Component';
 import ContactOption from '../ContactOption/ContactOption.Component';
+import ResourceBasicCard from '../ResourceBasicCard/ResourceBasicCard';
 
 const SavedResources = (props) => {
     const [folderList, setFolderList] = useState([]);
     const [updatedList, setupdatedList] = useState([]);
     const [viewedList, setviewedList] = useState([]);
     const [contactList, setcontactList] = useState([]);
+    const [basicCardList, setbasicCardList] = useState([]);
 
     useEffect(() => {
         setFolderList([
@@ -82,6 +84,25 @@ const SavedResources = (props) => {
                 description: 'Chat the Guardian service desk, or checkout our directory of home office staff.'
             }
         ]);
+        setbasicCardList([
+            {
+                cardId: 1,
+                resourceCardTypeIcon: 'external-link-alt',
+                resourceCardTitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+            }, {
+                cardId: 2,
+                resourceCardTypeIcon: 'external-link-alt',
+                resourceCardTitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+            }, {
+                cardId: 3,
+                resourceCardTypeIcon: 'external-link-alt',
+                resourceCardTitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+            }, {
+                cardId: 4,
+                resourceCardTypeIcon: 'external-link-alt',
+                resourceCardTitle: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+            }
+        ]);
     }, [])
 
     return (
@@ -100,6 +121,13 @@ const SavedResources = (props) => {
             <div className="recent-data-container">
                 <RecentData title="Recently updated" itemList={updatedList} />
                 <RecentData title="Recently Viewed" itemList={viewedList} />
+            </div>
+            <div className="resource-card-container">
+                {basicCardList && basicCardList.length ?
+                    basicCardList.map((item) => {
+                        return <ResourceBasicCard resourceCardDetails={item} />
+                    })
+                    : ''}
             </div>
             <hr></hr>
             <div className="footer-section">
