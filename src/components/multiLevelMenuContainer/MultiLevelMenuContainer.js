@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import clonedeep from 'lodash.clonedeep';
 import MultiLevelMenu from '../../common/MultiLevelMenu/MultiLevelMenu';
 
 const getSubMenu = (menuItem) => {
@@ -117,6 +118,7 @@ const MultiLevelMenuContainer = (props) => {
     const [menuList, setMenuList] = useState([{
         menuId: 'L1',
         menuTitle: 'Favorites',
+        iconName: 'bookmark',
         breadCrumpTrial: '',
         pageTitle: '',
         depthLevel: 1,
@@ -124,6 +126,7 @@ const MultiLevelMenuContainer = (props) => {
     }, {
         menuId: 'L9',
         menuTitle: 'Resources',
+        iconName: 'bookmark',
         breadCrumpTrial: '',
         pageTitle: '',
         depthLevel: 1,
@@ -146,7 +149,7 @@ const MultiLevelMenuContainer = (props) => {
     }
 
     const onMenuChange = (data) => {
-        let tempMenuList = JSON.parse(JSON.stringify(menuList));
+        let tempMenuList = clonedeep(menuList);
         let selectedMenu = null;
         for (let menuObj of tempMenuList) {
             selectedMenu = getSelectedMenu(menuObj, data.selectedMenu)
