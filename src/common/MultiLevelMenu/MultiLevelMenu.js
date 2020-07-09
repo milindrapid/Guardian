@@ -14,7 +14,10 @@ const SubMenuItem = styled.li`
     font-size: 1rem;
     font-weight: bold;
     line-height: 1.5rem;
-    &.active {
+    p {
+        display: inline-block;
+    }
+    p.active {
         text-decoration: underline;
     }
     &.secondLevelMenu {
@@ -45,6 +48,24 @@ const MenuIconContainer = styled.span`
     line-height: 1.125rem;
     color: #0D3F5E;
     margin-right: 1rem;
+`;
+
+const ArrowIconContainer = styled.span`
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 900;
+    line-height: 1.125rem;
+    color: #0D3F5E;
+    margin-left: 1rem;
+    .rotateIcon {
+        -ms-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
 `;
 
 const MultilevelMenu = (props) => {
@@ -91,7 +112,10 @@ const MultilevelMenu = (props) => {
                         {menuItem.depthLevel === 1 ? <MenuIconContainer>
                             <FontAwesomeIcon icon={['fa', menuItem.iconName]} />
                         </MenuIconContainer> : null}
-                        {menuItem.menuTitle}
+                        <p className={isExpanded(menuItem) ? 'active' : ''}>{menuItem.menuTitle}</p>
+                        {menuItem.depthLevel !== 1 ? <ArrowIconContainer>
+                            <FontAwesomeIcon className={isExpanded(menuItem) ? 'rotateIcon' : ''} icon={['fa', 'chevron-up']} />
+                        </ArrowIconContainer> : null}
                         {menuItem.subMenu && menuItem.subMenu.length > 0 && isExpanded(menuItem) &&
                             <MultilevelMenu menuList={menuItem.subMenu} onMenuChange={onMenuChange} />
                         }
