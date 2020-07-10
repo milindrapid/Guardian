@@ -6,6 +6,7 @@ import './MultiLevelMenu.fa';
 
 const MenuContainer = styled.ul`
     margin-bottom: 0;
+    list-style: none;
 `;
 
 const SubMenuItem = styled.li`
@@ -119,5 +120,16 @@ const MultilevelMenu = (props) => {
         </MenuContainer>
     );
 }
+
+MultilevelMenu.propTypes = {
+    menuList: PropTypes.arrayOf(Object).isRequired,
+    onMenuChange: PropTypes.func,
+    activeMenuId: PropTypes.string
+};
+
+MultilevelMenu.defaultProps = {
+    onMenuChange: () => { },
+    activeMenuId: null
+};
 
 export default MultilevelMenu;
