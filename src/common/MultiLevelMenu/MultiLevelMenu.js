@@ -16,9 +16,9 @@ const SubMenuItem = styled.li`
     line-height: 1.5rem;
     p {
         display: inline-block;
-    }
-    p.active {
-        text-decoration: underline;
+        &.test {
+            text-decoration: underline;
+        }
     }
     &.secondLevelMenu {
         padding-left: 0;
@@ -60,16 +60,10 @@ const ArrowIconContainer = styled.span`
     line-height: 1.125rem;
     color: #0D3F5E;
     margin-left: 1rem;
-    .rotateIcon {
-        -ms-transform: rotate(180deg);
-        -moz-transform: rotate(180deg);
-        -webkit-transform: rotate(180deg);
-        transform: rotate(180deg);
-    }
 `;
 
 const MultilevelMenu = (props) => {
-    const { menuList, onMenuChange } = props;
+    const { activeMenuId, menuList, onMenuChange } = props;
     const [expandedList, updateExpandedList] = useState([]);
 
     const getClassName = (depthLevel) => {
@@ -112,12 +106,12 @@ const MultilevelMenu = (props) => {
                         {menuItem.depthLevel === 1 ? <MenuIconContainer>
                             <FontAwesomeIcon icon={['fa', menuItem.iconName]} />
                         </MenuIconContainer> : null}
-                        <p className={isExpanded(menuItem) ? 'active' : ''}>{menuItem.menuTitle}</p>
+                        <p className={activeMenuId === menuItem.menuId ? 'test' : ''}>{menuItem.menuTitle}</p>
                         {menuItem.depthLevel !== 1 ? <ArrowIconContainer>
-                            <FontAwesomeIcon className={isExpanded(menuItem) ? 'rotateIcon' : ''} icon={['fa', 'chevron-up']} />
+                            <FontAwesomeIcon icon={isExpanded(menuItem) ? ['fa', 'chevron-down'] : ['fa', 'chevron-up']} />
                         </ArrowIconContainer> : null}
                         {menuItem.subMenu && menuItem.subMenu.length > 0 && isExpanded(menuItem) &&
-                            <MultilevelMenu menuList={menuItem.subMenu} onMenuChange={onMenuChange} />
+                            <MultilevelMenu menuList={menuItem.subMenu} onMenuChange={onMenuChange} activeMenuId={activeMenuId} />
                         }
                     </SubMenuItem>
                 })

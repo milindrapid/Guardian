@@ -133,6 +133,8 @@ const MultiLevelMenuContainer = (props) => {
         subMenu: []
     }]);
 
+    const [activeMenuId, setActiveMenuId] = useState(null);
+
     const getSelectedMenu = (menuObj, selectedMenu) => {
         if (menuObj.menuId === selectedMenu.menuId) {
             return menuObj
@@ -159,12 +161,13 @@ const MultiLevelMenuContainer = (props) => {
         }
         selectedMenu.subMenu = getSubMenu(selectedMenu);
         setMenuList(tempMenuList);
+        setActiveMenuId(data.selectedMenu.menuId);
         console.log('menu', data.selectedMenu);
     }
 
     return (
         <div className="multi-level-menu-container">
-            <MultiLevelMenu menuList={menuList} onMenuChange={onMenuChange} />
+            <MultiLevelMenu menuList={menuList} onMenuChange={onMenuChange} activeMenuId={activeMenuId} />
         </div>
     )
 
